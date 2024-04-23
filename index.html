@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="main">
+        <div class="canvas-container">
+            <canvas id="canvas" width="800" height="800" onclick="aliveCell(event)"></canvas>
+        </div>
+        <div>
+            <button class="play-btn base-btn" onclick="play()">Play</button>
+            <button class="step-btn base-btn" onclick="step()">Step</button>
+            <div class="menu">
+                <button onclick="generateRandomGrid()" class="base-btn">Генерировать</button>
+                <button onclick="resetGrid()" class="base-btn">Сбросить</button>
+            </div>
+            <div class="menu">
+                <label for="size">Размер поля:</label>
+                <input type="text" name="size" placeholder="100" onchange="setSize(this)">
+            </div>
+            <div class="menu">
+                <label for="density">Плотность частиц:</label>
+                <input type="text" name="density" placeholder="30" onchange="setDensity(this)">
+            </div>
+            <div class="menu">
+                <label for="speed">Скорость анимации:</label>
+                <input type="text" name="speed" placeholder="100" onchange="setSpeed(this)">
+            </div>
+            <div class="menu">
+                <div class="info-parametr">Поколение: <span class="counter-steps">0</span></div>
+                <div class="info-parametr">Живых клеток: <span class="counter-alive-cells">0</span></div>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
